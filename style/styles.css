@@ -1,0 +1,130 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 924px;
+  height: 500px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.item {
+  padding: 3rem;
+  justify-content: space-between;
+}
+
+.item-1 {
+  background-color: var(--bright-orange);
+  border-radius: .75rem 0 0 .75rem;
+}
+
+.item-2 {
+  background-color: var(--dark-cyan);
+}
+
+.item-3 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 .75rem .75rem 0;
+}
+
+.item__info {
+  gap: 2rem;
+}
+
+.info__imagem {
+  width: 70px;
+}
+
+.info__titulo {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--very-light-gray);
+}
+
+.info__paragrafo {
+  color: var(--transparent-white);
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.5rem;
+}
+
+.item__botao {
+  border: 3px solid var(--very-light-gray);
+  background-color: var(--very-light-gray);
+  border-radius: 10rem;
+  font-family: 'Lexend Deca', sans-serif;
+  padding: .75rem 1.25rem;
+  width: 75%;
+  font-size: 1rem;
+}
+
+.item-1 .item__botao:active,
+.item-2 .item__botao:active,
+.item-3 .item__botao:active {
+  background-color: transparent;
+  color: var(--very-light-gray);
+}
+
+.item-1 .item__botao {
+  color: var(--bright-orange);
+}
+
+.item-2 .item__botao {
+  color: var(--dark-cyan);
+}
+
+.item-3 .item__botao {
+  color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    align-items: start;
+  }
+
+  main {
+    margin-top: 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 375px;
+    height: 1320px;
+  }
+
+  .item-1 {
+    border-radius: .75rem .75rem 0 0;
+  }
+
+  .item-3 {
+    border-radius: 0 0 .75rem .75rem;
+  }
+
+  .item__botao {
+    margin-top: 0;
+  }  
+}
